@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <input type="checkbox" id="check">
+        <label for="check"><i class="fa fa-bars"><span>Menu</span></i></label>
+        <nav>
+            <div class="search">
+                <i class="fa fa-search"></i>
+                <input type="search" placeholder="Search">
+            </div>
+            
+            <div class="logo">
+                <img src="img/logo.ni.jpg" alt="logo">
+                <span>Studio</span>
+            </div>
+
+            <div class="icons" id="toggle">
+                <a href="#" onclick="showContact()"><i class="fa-regular fa-id-badge"></i></a>
+                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                <a href="#" onclick="showCart()"><i class="fa-solid fa-cart-shopping"></i><span class="cart-count" id="cart-count">0</span></a>
+            </div>
+        </nav>
+    </header>
+        <div class="pop-up" id="popup"><a onclick="closeCart1()"><i class="fa fa-close"></i></a>
+            <div class="cont-dropdown" id="cont-dropdown">
+                <h3 style="color: white; text-align: center; margin: 1rem 0rem;" class="cont">Contact</h3>
+            </div>
+        </div>
+        <div class="pop-up" id="pop-up"><a onclick="closeCart()" ><i class="fa fa-close"></i></a>
+            <div class="cart-dropdown" id="cart-dropdown">
+                <h3 style="color: white; text-align: center; margin: 1rem 0rem;"class="cart">Your Cart</h3>
+                <div class="cart-items" id="products"></div>
+            </div>
+        </div>
+        <div id="result"></div>     
+    <section class="home">
+     
+        <div class="home-container">
+            <div class="home-content">
+                <h1>Are you ready to <br> <span>lead the way</span></h1>
+                <p>Luxury meets ultimate sitting comfort</p><br>
+                <a href="#" class="discover-btn">Discover →</a>
+                <div class="home-images">
+                    <div class="box"><img src="img/3-removebg-preview.png" alt="Shoe Preview 1"></div>
+                    <div class="box"><img src="img/3-removebg-preview.png" alt="Shoe Preview 2"></div>
+                    <div class="box"><img src="img/3-removebg-preview.png" alt="Shoe Preview 3"></div>
+                </div>
+            </div>
+            <div class="home-imagelogo">
+                <img src="img/shoe logo.png">
+            </div>
+        </div>
+
+        <div class="product-container">
+
+            <div class="pro-box">
+                <div class="pro-img p1">
+                    <div class="new-logo">
+                        New
+                    </div>
+                    <a href="proPage.html" onclick="proShow()"><img src="img/nike1-removebg-preview.png" alt=""></a>
+                </div>
+                <div class="pro-info">
+                    <h2>Nike air</h2>
+                    <h3>5000</h3>
+                    <span></span>
+                    <div class="btn">
+                        <button onclick="addToCart('Nike',5000,'img/nike1-removebg-preview.png')"><i class="fa-solid fa-cart-shopping"></i><span>Add to cart</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="pro-box">
+                <div class="pro-img p2">
+                    <div class="new-logo">
+                        New
+                    </div>
+                    <a href="proPage2.html" onclick="proShow()"><img src="img/nike2-removebg-preview.png" alt=""></a>
+                </div>
+                <div class="pro-info">
+                    <h2>Nike air</h2>
+                    <h3>5000</h3>
+                    <span></span>
+                    <div class="btn">
+                        <button onclick="addToCart('Nike',5000,'img/nike2-removebg-preview.png')"><i class="fa-solid fa-cart-shopping"></i><span>Add to cart</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="pro-box p3">
+                <div class="pro-img p3">
+                    <div class="new-logo">
+                        New
+                    </div>
+                    <a href="proPage3.html" onclick="proShow()"><img src="img/nike3-removebg-preview.png" alt=""></a>
+                </div>
+                <div class="pro-info">
+                    <h2>Nike air</h2>
+                    <h3>5000</h3>
+                    <span></span>
+                    <div class="btn">
+                        <button onclick="addToCart('Nike',5000,'img/nike3-removebg-preview.png')"><i class="fa-solid fa-cart-shopping"></i><span>Add to cart</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="pro-box">
+                <div class="pro-img p4">
+                    <div class="new-logo">
+                        New
+                    </div>
+                    <a href="proPage4.html" onclick="proShow()"><img src="img/nike4-removebg-preview.png" alt=""></a>
+                </div>
+                <div class="pro-info">
+                    <h2>Nike air</h2>
+                    <h3>5000</h3>
+                    <span></span>
+                    <div class="btn">
+                        <button onclick="addToCart('Nike',5000,'img/nike4-removebg-preview.png')"><i class="fa-solid fa-cart-shopping"></i><span>Add to cart</span></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        function showContact(){
+            let show = document.getElementById("popup");
+            let result = document.getElementById("result");
+            result.innerContent= show.style.display="block";
+        }
+        function closeCart1(){
+            let show =document.getElementById("popup")
+            let close= document.getElementById("result")
+            close.innerContent=show.style.display="none";
+        }
+        function showCart(){
+            let show = document.getElementById("pop-up");
+            let result = document.getElementById("result");
+            result.innerContent= show.style.display="block";
+        }
+        function closeCart(){
+            let show =document.getElementById("pop-up")
+            let close= document.getElementById("result")
+            close.innerContent=show.style.display="none";
+        }
+    
+
+        let cart = [];
+
+    function addToCart(name, price, image) {
+        let item = cart.find(product => product.image === image   );
+        
+
+        if (item) {
+            item.quantity++;
+        } else {
+            cart.push({ name, price, image, quantity: 1 });
+        }
+ 
+        updateCart();
+    }
+
+    
+    function updateCart() {
+            let cartCount = document.getElementById("cart-count");
+            let cartDropdown = document.getElementById("products");
+
+            cartCount.innerText = cart.reduce((total, item) => total + item.quantity, 0);
+            cartCount.style.display = cart.length > 0 ? "block" : "none";
+
+            cartDropdown.innerHTML = "";
+
+            cart.forEach((item, index) => {
+                let cartItem = document.createElement("div");
+                cartItem.classList.add("products");
+                cartItem.innerHTML = `
+                    <img src="${item.image}" width="40">
+                    <span>${item.name} x${item.quantity}</span>
+                    <button onclick="removeFromCart(${index})">Remove</button>
+                `;
+                cartDropdown.appendChild(cartItem);
+            });
+        }
+
+        function removeFromCart(index) {
+            if(cart[index].quantity>1){
+                cart[index].quantity--;
+            }
+            else{
+                cart.splice(index,1);
+            }
+            
+            updateCart();
+        }
+
+    </script>
+    
+</body>
+
+</html>
