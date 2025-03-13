@@ -423,6 +423,7 @@ section{
     }
     nav .logo img{
         width: 50px;
+/*         display:none; */
     }
     nav .logo span{
         font-size: .8rem;
@@ -511,7 +512,7 @@ section{
         width: 50%;
     }
     nav .logo img{
-        width: 30px;
+        display:none;
     }
     nav .logo span{
         font-size: .8rem;
@@ -598,7 +599,7 @@ section{
         width: 70%;
     }
     nav .logo img{
-        width: 30px;
+        display:none;
     }
     nav .logo span{
         font-size: .6rem;
