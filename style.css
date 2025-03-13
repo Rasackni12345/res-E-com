@@ -41,7 +41,13 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-.search,label{
+label{
+    background: rgba(0,0,0,0.2);
+    padding: 10px 15px;
+    border-radius: 30px;
+    border: none;
+}
+.search{
     display: flex;
     flex-direction: row;
     gap: 5px;
