@@ -501,6 +501,9 @@ section{
     .header label span{
         display: none;
     }
+    .header nav{
+        font-size:.5rem;
+    }
     .search{
         width:250px;
     }
