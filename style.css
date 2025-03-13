@@ -501,6 +501,9 @@ section{
     .header label span{
         display: none;
     }
+    .search{
+        width:250px;
+    }
     nav .logo img{
         width: 30px;
     }
@@ -578,6 +581,9 @@ section{
     }
     .header label span{
         display: none;
+    }
+      .search{
+        width:250px;
     }
     nav .search {
         width: 170px;
