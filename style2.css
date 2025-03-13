@@ -48,6 +48,9 @@ body{
     border: none;
 }
 .search input{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
     border: none;
     color: black;
     font-weight: 600;
@@ -316,7 +319,7 @@ section{
         display: none;
     }
     nav .logo img{
-        width: 50px;
+        width: 30px;
     }
     nav .logo span{
         font-size: .8rem;
@@ -378,7 +381,7 @@ section{
         width: 70%;
     }
     nav .logo img{
-        width: 50px;
+        width: 30px;
     }
     nav .logo span{
         font-size: .6rem;
