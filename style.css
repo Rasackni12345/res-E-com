@@ -512,6 +512,7 @@ section{
         width: 50%;
     }
     nav .logo img{
+        border:5px solid red;
         display:none;
     }
     nav .logo span{
